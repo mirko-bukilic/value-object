@@ -85,12 +85,6 @@ class TimestampValueMilliseconds implements StringInterface, NumberInterface
             ? $timestamp
             : (string) (int) $timestamp;
 
-        if ($check !== $timestamp) {
-            return false;
-        }
-
-        $intValue = (int) $timestamp;
-
-        return $intValue >= 0;
+        return $check === $timestamp;
     }
 }

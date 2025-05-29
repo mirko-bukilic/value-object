@@ -74,8 +74,9 @@ class TimestampValueMillisecondsTest extends TestCase
     public function testNow()
     {
         $time = time();
+        $date = date('Y-m-d');
         $timestamp = TimestampValueMilliseconds::now();
-        $this->assertEquals('2025-05-28', $timestamp->getFormatted());
+        $this->assertEquals($date, $timestamp->getFormatted());
         $this->assertEquals($time, $timestamp->getSeconds());
     }
 
